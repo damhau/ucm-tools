@@ -81,7 +81,7 @@ def main():
         client = Client(wsdl, location=location, faults=False,
                     plugins=[ImportDoctor(imp)], username=user, password=pwd)
     except:
-        print "Error with version or IP address of server. Please try again."
+        print ("Error with version or IP address of server. Please try again.")
         sys.exit()
     try:
         verresp = client.service.getCCMVersion()
